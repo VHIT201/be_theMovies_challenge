@@ -20,6 +20,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
 
 namespace Common.Application.Configurations
 {
@@ -80,8 +82,9 @@ namespace Common.Application.Configurations
 
 		public virtual void ConfigServices(IServiceCollection services, Assembly assembly, BaseAppSetting setting)
         {
-			//Generic services need to inject
-			services.AddSingleton<ILogManager>(new LogManager(_environment.EnvironmentName));
+
+            //Generic services need to inject
+            services.AddSingleton<ILogManager>(new LogManager(_environment.EnvironmentName));
 			services.AddScoped<IUnitsOfWork, UnitsOfWork>();
             services.AddScoped<AuthUserService<S>>();
 

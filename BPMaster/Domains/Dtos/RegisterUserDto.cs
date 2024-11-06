@@ -15,6 +15,8 @@ namespace Domain.Dtos
 
         [Required]
         public  required string LastName { get; set; }
+        [Required]
+        public required string Role { get; set; } 
 
         public static RegisterUserDto Mock()
         {
@@ -22,7 +24,8 @@ namespace Domain.Dtos
                 Username = "user@test.com",
                 Password = "password",
                 FirstName = "Test First Name",
-                LastName = "Test Last Name"
+                LastName = "Test Last Name",
+                Role = "test"
             };
         }
     }

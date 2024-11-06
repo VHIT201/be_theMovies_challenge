@@ -12,7 +12,8 @@ namespace Common.Databases.PostgresSql
             { typeof(DateTime), "timestamp with time zone" },
             { typeof(byte[]), "bytea[]" },
             { typeof(bool), "boolean" },
-            { typeof(int), "int" }
+            { typeof(int), "int" },
+            { typeof(decimal), "numeric" }
         };
 
         Dictionary<Type, string> IDictionaryDataType.Dictionary => PostgresSqlMap;

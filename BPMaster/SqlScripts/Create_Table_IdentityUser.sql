@@ -7,6 +7,7 @@ CREATE TABLE "identity_users"
     "AuthenticationType" int,
     "Salts" varchar(255),
     "Status" int,
+    "Role" varchar(255),
     "FirstName" varchar(255),
     "LastName" varchar(255),
     "CreatedAt" timestamp with time zone,

@@ -13,5 +13,6 @@ namespace Repositories
             var sql = SqlCommandHelper.GetSelectSqlWithCondition<IdentityUser>(new { Username = username });
             return await GetOneByConditionAsync(sql, param);
         }
+        
     }
 }

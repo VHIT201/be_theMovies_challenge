@@ -11,11 +11,11 @@ namespace Application.Settings
             var version = description.ApiVersion.ToString();
             return new OpenApiInfo
             {
-                Title = "BP Master Service API Document",
+                Title = "RPMS Service API Document",
                 Version = version,
                 Description = $"List of public APIs- Version {version} in BP Master Service",
                 Contact = new OpenApiContact { Name = "Author name", Email = "developer@meu.com" },
-                License = new OpenApiLicense { Name = "LSP License", Url = new Uri("http://localhost") }
+                //License = new OpenApiLicense { Name = "LSP License", Url = new Uri("http://localhost") }
             };
         }
     }

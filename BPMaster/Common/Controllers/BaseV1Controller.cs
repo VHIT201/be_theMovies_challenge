@@ -5,11 +5,13 @@ using Common.Application.Models;
 using Common.Application.Settings;
 using Common.Loggers.Interfaces;
 using Common.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Common.Controllers
 {
+    
     [ApiController]
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]

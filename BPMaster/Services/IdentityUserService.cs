@@ -59,5 +59,16 @@ namespace Services
 
             return JwtUtil.CreateJwtToken(_jwtTokenSetting, authenticatedUser);
         }
+        public async Task<InfomationDto> Getinformation(string username)
+        {
+            var user = await _repo.GetByUsernameAsync(username);
+
+            var infomation = _mapper.Map<InfomationDto>(user);
+            if (user == null)
+            {
+                throw new NonAuthenticateException();
+            }
+            return infomation;
+        }
     }
 }
